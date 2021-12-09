@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="weather">Weather Detector</h1>
+    </header>
+    <center>
+      <div class="container">
+        <form action="" method="post">
+          {% csrf_token %}
+          <input type="search" name="city" placeholder="Search" />
+          <button type="submit" disabled>Search</button>
+        </form>
+      </div>
+    </center>
+    <div class="content">
+      <div class="loader-container"></div>
+      <h1 class="city"></h1>
+      <h2 class="country-code"></h2>
+      <h4 class="weather2"></h4>
+      <h4 class="coor"></h4>
+      <h4 class="temp"></h4>
+      <h4 class="press"></h4>
+      <h4 class="hum"></h4>
+      <h1 class="error"></h1>
+    </div>
+
+    <script src="{% static '/js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static '/js/weather.js' %}"></script>
+  </body>
+</html>

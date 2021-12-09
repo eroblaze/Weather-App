@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h4 {
+  margin-bottom: 10px;
+}
+header {
+  background-color: rgb(151, 150, 150);
+  color: white;
+  margin: 0px;
+  padding: 0px;
+}
+.weather {
+  margin: 0px;
+  padding-bottom: 7px;
+  padding-top: 13px;
+  margin-left: 30px;
+}
+.container {
+  margin-top: 30px;
+}
+.container input {
+  width: 600px;
+  height: 30px;
+  padding: 5px;
+}
+.container button {
+  height: 30px;
+}
+.content {
+  width: 52%;
+  margin: 0 auto;
+}
+.loader-container {
+  position: relative;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.loading {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid rgb(151, 150, 150);
+  animation: 2s spin linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
